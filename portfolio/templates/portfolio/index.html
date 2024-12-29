@@ -1,12 +1,11 @@
-{% load static %}
+
 <!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com -->
-<!-- Last Published: Thu May 13 2021 23:36:11 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="rishit.webflow.io" data-wf-page="5e9c6f3492aec830bc2678d5" data-wf-site="5e9c6f33b27cf6b2909e13c1" data-wf-status="1">
+{% load static %}
+<html data-wf-domain="" data-wf-page="5e9c6f3492aec830bc2678d5" data-wf-site="5e9c6f33b27cf6b2909e13c1" data-wf-status="1">
  <head>
   <meta charset="utf-8"/>
   <title>
-   Jai Vishwa's - Portfolio
+   Vichu - Portfolio
   </title>
 <!--  <meta content="Hey there! I'm Jai vishwa and I make awesome websites! Check out my portfolio here at rishit.codes." name="description"/>-->
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -21,7 +20,7 @@
   <script type="text/javascript">
    !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
   </script>
-  <link href="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac7c71b41a94e771ad45be_rishit_logo.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="{% static 'images/J_logo.png' %}" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac7cfab5dab01af1abd82c_rishit_logo_256.png" rel="apple-touch-icon"/>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-73079055-13">
   </script>
@@ -33,19 +32,23 @@
   <div class="navbar-3 w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in" data-easing2="ease-out" role="banner">
    <div class="custom-container nav1">
     <a aria-current="page" class="brand-2 w-nav-brand w--current" href="/">
-     <img alt="" class="image-3" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5ea3cc6dc07d78d8eb32221c_RP%20Logo.svg" width="31"/>
+     <img alt="" class="image-3" src="{% static 'images/J_logo.png' %}" width="50"/>
     </a>
     <nav class="nav-menu-3 w-nav-menu" role="navigation">
-     <a class="nav-big w-nav-link" href="#skills">
-      Skills
-     </a>
-     <a class="nav-big w-nav-link" href="#projects">
-      Projects
-     </a>
-     <a class="nav-big w-nav-link" href="#contact">
-      Contact
-     </a>
-    </nav>
+  <a class="nav-big w-nav-link" href="#skills" style="position: relative; text-decoration: none; color: inherit; transition: color 0.3s; font-weight: bold;">
+    Skills
+  </a>
+
+  <a class="nav-big w-nav-link" href="#projects" style="position: relative; text-decoration: none; color: inherit; transition: color 0.3s; font-weight: bold;">
+    Projects
+  </a>
+
+  <a class="nav-big w-nav-link" href="#contact" style="position: relative; text-decoration: none; color: inherit; transition: color 0.3s; font-weight: bold;">
+    Contact
+  </a>
+</nav>
+
+
     <div class="menu-button-4 w-nav-button">
      <div class="w-icon-nav-menu">
      </div>
@@ -66,7 +69,7 @@
        </span>
       </div>
       <div class="hero-small-txt">
-       and I make beautiful websites!
+       And I craft striking, impactful websites!
       </div>
      </div>
      <div class="hero-right">
@@ -88,9 +91,10 @@
        <div class="skills-anim" data-animation-type="lottie" data-autoplay="0" data-default-duration="2.0166666666666666" data-direction="1" data-duration="0" data-is-ix2-target="1" data-loop="0" data-renderer="svg" data-src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5ea88f2bcb6c06df50bc35a8_skills_web_design.json" data-w-id="1df8018c-3ab8-1a8e-c713-b9c87ee1e4ea">
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 33" width="41" height="33" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_22"><rect width="41" height="33" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_22)"><g transform="matrix(1,0,0,1,5.231000900268555,2.0749988555908203)" opacity="1" style="display: block;"><path fill="rgb(99,8,190)" fill-opacity="1" d="M0 0"></path><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(99,8,190)" stroke-opacity="1" stroke-width="1" d=" M4.872000217437744,26.725000381469727 C4.872000217437744,26.725000381469727 24.5939998626709,26.725000381469727 24.5939998626709,26.725000381469727 C24.5939998626709,26.725000381469727 25.621999740600586,28.7810001373291 25.621999740600586,28.7810001373291 C25.621999740600586,28.7810001373291 3.8440001010894775,28.7810001373291 3.8440001010894775,28.7810001373291 C3.8440001010894775,28.7810001373291 4.872000217437744,26.725000381469727 4.872000217437744,26.725000381469727z M4.389999866485596,25.354999542236328 C4.156000137329102,25.378000259399414 3.950000047683716,25.518999099731445 3.8440001010894775,25.729000091552734 C3.8440001010894775,25.729000091552734 2.13100004196167,29.1560001373291 2.13100004196167,29.1560001373291 C2.0230000019073486,29.368000030517578 2.0329999923706055,29.621000289916992 2.1570000648498535,29.823999404907227 C2.2809998989105225,30.027000427246094 2.503000020980835,30.150999069213867 2.740999937057495,30.150999069213867 C2.740999937057495,30.150999069213867 26.725000381469727,30.150999069213867 26.725000381469727,30.150999069213867 C26.96299934387207,30.150999069213867 27.184999465942383,30.027000427246094 27.30900001525879,29.823999404907227 C27.433000564575195,29.621000289916992 27.44300079345703,29.368000030517578 27.334999084472656,29.1560001373291 C27.334999084472656,29.1560001373291 25.621999740600586,25.729000091552734 25.621999740600586,25.729000091552734 C25.5049991607666,25.499000549316406 25.270000457763672,25.354999542236328 25.011999130249023,25.354999542236328 C25.011999130249023,25.354999542236328 4.453999996185303,25.354999542236328 4.453999996185303,25.354999542236328 C4.433000087738037,25.354000091552734 4.410999774932861,25.354000091552734 4.389999866485596,25.354999542236328z M12.376999855041504,19.871999740600586 C12.376999855041504,19.871999740600586 17.089000701904297,19.871999740600586 17.089000701904297,19.871999740600586 C17.089000701904297,19.871999740600586 18.68400001525879,22.61400032043457 18.68400001525879,22.61400032043457 C18.68400001525879,22.61400032043457 10.781999588012695,22.61400032043457 10.781999588012695,22.61400032043457 C10.781999588012695,22.61400032043457 12.376999855041504,19.871999740600586 12.376999855041504,19.871999740600586z M18.759000778198242,6.499000072479248 C18.448999404907227,6.526000022888184 18.195999145507812,6.758999824523926 18.14299964904785,7.065999984741211 C18.09000015258789,7.373000144958496 18.250999450683594,7.677000045776367 18.534000396728516,7.806000232696533 C18.534000396728516,7.806000232696533 22.78499984741211,9.935999870300293 22.78499984741211,9.935999870300293 C22.78499984741211,9.935999870300293 18.534000396728516,12.055999755859375 18.534000396728516,12.055999755859375 C18.194000244140625,12.22700023651123 18.058000564575195,12.642000198364258 18.229000091552734,12.982000350952148 C18.399999618530273,13.321999549865723 18.815000534057617,13.458999633789062 19.155000686645508,13.288000106811523 C19.155000686645508,13.288000106811523 24.636999130249023,10.54699993133545 24.636999130249023,10.54699993133545 C24.871999740600586,10.432000160217285 25.020999908447266,10.192999839782715 25.020999908447266,9.930999755859375 C25.020999908447266,9.668999671936035 24.871999740600586,9.430000305175781 24.636999130249023,9.3149995803833 C24.636999130249023,9.3149995803833 19.155000686645508,6.573999881744385 19.155000686645508,6.573999881744385 C19.052000045776367,6.521999835968018 18.937999725341797,6.495999813079834 18.822999954223633,6.499000072479248 C18.802000045776367,6.498000144958496 18.780000686645508,6.498000144958496 18.759000778198242,6.499000072479248z M10.557000160217285,6.499000072479248 C10.470999717712402,6.507999897003174 10.387999534606934,6.533999919891357 10.310999870300293,6.573999881744385 C10.310999870300293,6.573999881744385 4.828999996185303,9.3149995803833 4.828999996185303,9.3149995803833 C4.593999862670898,9.430000305175781 4.445000171661377,9.668999671936035 4.445000171661377,9.930999755859375 C4.445000171661377,10.192999839782715 4.593999862670898,10.432000160217285 4.828999996185303,10.54699993133545 C4.828999996185303,10.54699993133545 10.310999870300293,13.288000106811523 10.310999870300293,13.288000106811523 C10.651000022888184,13.458999633789062 11.065999984741211,13.321999549865723 11.237000465393066,12.982000350952148 C11.407999992370605,12.642000198364258 11.272000312805176,12.22700023651123 10.932000160217285,12.055999755859375 C10.932000160217285,12.055999755859375 6.681000232696533,9.935999870300293 6.681000232696533,9.935999870300293 C6.681000232696533,9.935999870300293 10.932000160217285,7.806000232696533 10.932000160217285,7.806000232696533 C11.22700023651123,7.669000148773193 11.383999824523926,7.3429999351501465 11.309000015258789,7.026000022888184 C11.234000205993652,6.709000110626221 10.946999549865723,6.488999843597412 10.621999740600586,6.499000072479248 C10.60099983215332,6.498000144958496 10.57800006866455,6.498000144958496 10.557000160217285,6.499000072479248z M16.43600082397461,4.775000095367432 C16.406999588012695,4.7769999504089355 16.378000259399414,4.781000137329102 16.350000381469727,4.785999774932861 C16.099000930786133,4.822999954223633 15.888999938964844,4.995999813079834 15.803999900817871,5.236000061035156 C15.803999900817871,5.236000061035156 12.376999855041504,14.144000053405762 12.376999855041504,14.144000053405762 C12.241000175476074,14.49899959564209 12.418999671936035,14.897000312805176 12.77400016784668,15.032999992370605 C13.128999710083008,15.168999671936035 13.526000022888184,14.991999626159668 13.661999702453613,14.63700008392334 C13.661999702453613,14.63700008392334 17.089000701904297,5.728000164031982 17.089000701904297,5.728000164031982 C17.18000030517578,5.513000011444092 17.155000686645508,5.265999794006348 17.023000717163086,5.072999954223633 C16.891000747680664,4.880000114440918 16.670000076293945,4.767000198364258 16.43600082397461,4.775000095367432z M2.3980000019073486,1.371000051498413 C2.3980000019073486,1.371000051498413 27.06800079345703,1.371000051498413 27.06800079345703,1.371000051498413 C27.64900016784668,1.371000051498413 28.09600067138672,1.8170000314712524 28.09600067138672,2.3980000019073486 C28.09600067138672,2.3980000019073486 28.09600067138672,17.474000930786133 28.09600067138672,17.474000930786133 C28.09600067138672,18.05500030517578 27.64900016784668,18.50200080871582 27.06800079345703,18.50200080871582 C27.06800079345703,18.50200080871582 2.3980000019073486,18.50200080871582 2.3980000019073486,18.50200080871582 C1.8170000314712524,18.50200080871582 1.371000051498413,18.05500030517578 1.371000051498413,17.474000930786133 C1.371000051498413,17.474000930786133 1.371000051498413,2.3980000019073486 1.371000051498413,2.3980000019073486 C1.371000051498413,1.8170000314712524 1.8170000314712524,1.371000051498413 2.3980000019073486,1.371000051498413z M2.3980000019073486,0 C1.0809999704360962,0 0,1.0809999704360962 0,2.3980000019073486 C0,2.3980000019073486 0,17.474000930786133 0,17.474000930786133 C0,18.791000366210938 1.0809999704360962,19.871999740600586 2.3980000019073486,19.871999740600586 C2.3980000019073486,19.871999740600586 10.793000221252441,19.871999740600586 10.793000221252441,19.871999740600586 C10.793000221252441,19.871999740600586 9.005000114440918,22.94499969482422 9.005000114440918,22.94499969482422 C8.878000259399414,23.156999588012695 8.87399959564209,23.422000885009766 8.996000289916992,23.636999130249023 C9.118000030517578,23.851999282836914 9.347000122070312,23.985000610351562 9.593999862670898,23.983999252319336 C9.593999862670898,23.983999252319336 19.871999740600586,23.983999252319336 19.871999740600586,23.983999252319336 C20.118999481201172,23.985000610351562 20.347999572753906,23.851999282836914 20.469999313354492,23.636999130249023 C20.591999053955078,23.422000885009766 20.58799934387207,23.156999588012695 20.461000442504883,22.94499969482422 C20.461000442504883,22.94499969482422 18.67300033569336,19.871999740600586 18.67300033569336,19.871999740600586 C18.67300033569336,19.871999740600586 27.06800079345703,19.871999740600586 27.06800079345703,19.871999740600586 C28.385000228881836,19.871999740600586 29.465999603271484,18.791000366210938 29.465999603271484,17.474000930786133 C29.465999603271484,17.474000930786133 29.465999603271484,2.3980000019073486 29.465999603271484,2.3980000019073486 C29.465999603271484,1.0809999704360962 28.385000228881836,0 27.06800079345703,0 C27.06800079345703,0 2.3980000019073486,0 2.3980000019073486,0z"></path></g></g></svg>
        </div>
+
       </div>
       <h3 class="skills-heading">
-       Web Design
+       Web Development
       </h3>
       <p class="skills-para">
        Building awesome websites is my passion. PYTHON, DJANGO, HTML, CSS, JavaScript, Bootstrap, MySQL? You name it. I got it covered!
@@ -119,7 +123,7 @@
        Webmaster
       </h3>
       <p class="skills-para" id="w-node-_69d19f9a-ad33-3ea8-6b48-2f4ff607ae25-bc2678d5">
-       I can also manage CMS like  Webflow &amp; Shopify. SEO, Analytics and Marketing skills are also under my belt!
+       Through careful SEO strategy and targeted marketing, I ensure your website stands out and reaches the right audience.
       </p>
      </div>
     </div>
@@ -135,19 +139,11 @@
     <div class="w-layout-grid grid-3">
      <div class="project-card" id="w-node-_8285381a-4e11-d78d-4752-03de37d123a1-bc2678d5">
       <div class="card-img">
-       <img alt="" class="img-inside" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eab9bd846d66a6237be3111_cPanelHosting.net%20Logo.svg"/>
+       <img alt="" class="img-inside" src="{% static 'images/karunai_logo.webp' %}"/>
       </div>
       <div class="column-1 w-row">
-       <div class="view-code w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-6">
-        <a class="code-link w-inline-block" href="https://bit.ly/cpanelrp" target="_blank">
-         <img alt="" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac3c84d76edd555fe3f74b_code.svg"/>
-         <div class="text-code code-link">
-          View Code
-         </div>
-        </a>
-       </div>
        <div class="view-live w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-6">
-        <a class="live-link w-inline-block" href="https://bit.ly/cPanelHrp" target="_blank">
+        <a class="live-link w-inline-block" href="https://karunaikarangalindia.org/" target="_blank">
          <img alt="" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac3c85c72032b79a14fb7f_eye.svg"/>
          <div class="text-code">
           View Live
@@ -156,19 +152,19 @@
        </div>
       </div>
       <div class="text-block">
-       cPanelHosting.net
+       karunaikarangalindia.org
       </div>
       <p class="p4">
-       Redesigned homepage of the hosting website.
+       Designed and Developed This NGO Site
       </p>
      </div>
      <div class="project-card" id="w-node-_983de338-9d85-7e74-9c39-58e21c303737-bc2678d5">
       <div class="card-img">
-       <img alt="" class="img-inside" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eafc1da6c54ed0e82a2dd76_pitzeria%20logo.svg"/>
+       <img alt="" class="img-inside" src="{% static 'images/temp_scrap.webp' %}"/>
       </div>
       <div class="column-1 w-row">
        <div class="view-code w-col w-col-6 w-col-small-6 w-col-tiny-6">
-        <a class="code-link w-inline-block" href="https://bit.ly/pitzeria" id="bj-code" target="_blank">
+        <a class="code-link w-inline-block" href="https://github.com/Jaivishwa-dev/web-template-scraping" id="bj-code" target="_blank">
          <img alt="" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac3c84d76edd555fe3f74b_code.svg"/>
          <div class="text-code code-link">
           View Code
@@ -176,7 +172,7 @@
         </a>
        </div>
        <div class="view-live w-col w-col-6 w-col-small-6 w-col-tiny-6">
-        <a class="live-link w-inline-block" href="https://bit.ly/Pitzeria" id="bj-live" target="_blank">
+        <a class="live-link w-inline-block" href="https://github.com/Jaivishwa-dev/web-template-scraping/blob/main/output%20images/full%20page.png" id="bj-live" target="_blank">
          <img alt="" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac3c85c72032b79a14fb7f_eye.svg"/>
          <div class="text-code">
           View Live
@@ -185,70 +181,583 @@
        </div>
       </div>
       <div class="text-block">
-       Pitzeria
+       Web Template Scraping
       </div>
       <p class="p4">
-       An interactive pizza menu made with HTML, CSS, JS.
+       An automated tool for extracting code from websites to create reusable templates.
+
       </p>
      </div>
      <div class="project-card" id="w-node-cc464096-b31d-d80e-7da0-4b3acb100314-bc2678d5">
       <div class="card-img">
-       <img alt="" class="img-inside" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac486ebf9632057cbf37c8_wakachi%20games.svg"/>
+       <img alt="" class="img-inside" src="{% static 'images/m7_logo.webp' %}"/>
       </div>
-      <a class="live-link w-inline-block" href="https://bit.ly/wakachi" target="_blank">
+      <a class="live-link w-inline-block" href="https://www.m7corporation.tech/" target="_blank">
        <img alt="" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac3c85c72032b79a14fb7f_eye.svg"/>
        <div class="text-code">
         View Live
        </div>
       </a>
       <div class="text-block">
-       Wakachi Games
+       M7 corporation
       </div>
       <p class="p4">
-       Built UI prototype of company profile for Wakachi Games.
+       Created a professional company profile for M7 Corporation with a user-friendly and innovative design.
       </p>
      </div>
     </div>
    </div>
   </div>
-  <div class="contact" id="contact">
-   <div class="custom-container">
-    <h1 class="headings connect">
-     Let's Connect!
-    </h1>
-    <div class="email-div">
-     <h1 class="email">
-      jaivishwa.dev@gmail.com
-     </h1>
-     <a class="button-3 w-button" href="mailto:jaivishwa.dev@gmail.com?subject=Hey!">
-      Send email
-     </a>
-    </div>
-    <div class="social-media">
-     <a class="w-inline-block" href="https://bit.ly/imrishit98LI" target="_blank">
-      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4c1f90e274c0053c6_linkedin.svg"/>
-     </a>
-     <a class="w-inline-block" href="https://github.com/Jaivishwa-dev" target="_blank">
-      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4a0d3e432e65a2661_github.svg" width="512"/>
-     </a>
-<!--     <a class="w-inline-block" href="https://bit.ly/rpcodepen" target="_blank">-->
-<!--      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eb052e86e90da0a8e0e6bda_codepen.svg" width="256"/>-->
+
+
+<!--  <div class="contact" id="contact">-->
+<!--   <div class="custom-container">-->
+<!--    <h1 class="headings connect">-->
+<!--     Let's Connect!-->
+<!--    </h1>-->
+<!--    <div class="email-div">-->
+<!--     <h1 class="email">-->
+<!--      jaivishwa.dev@gmail.com-->
+<!--     </h1>-->
+<!--     <a class="button-3 w-button" href="mailto:jaivishwa.dev@gmail.com?subject=Hey!">-->
+<!--      Send email-->
 <!--     </a>-->
-    </div>
+<!--    </div>-->
+<!--    <div class="social-media">-->
+<!--     <a class="w-inline-block" href="https://www.linkedin.com/in/jaivishwa-j/" target="_blank">-->
+<!--      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4c1f90e274c0053c6_linkedin.svg"/>-->
+<!--     </a>-->
+<!--     <a class="w-inline-block" href="https://github.com/Jaivishwa-dev" target="_blank">-->
+<!--      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4a0d3e432e65a2661_github.svg" width="512"/>-->
+<!--     </a>-->
+<!--&lt;!&ndash;     <a class="w-inline-block" href="https://bit.ly/rpcodepen" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;      <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eb052e86e90da0a8e0e6bda_codepen.svg" width="256"/>&ndash;&gt;-->
+<!--&lt;!&ndash;     </a>&ndash;&gt;-->
+<!--    </div>-->
+<!--   </div>-->
+<!--  </div>-->
+
+    <div class="contact" id="contact">
+       <div class="custom-container">
+<!--          <h1 class="headings connect">Let's Connect!</h1>-->
+
+<h1 class="headings connect" style="
+   font-size: 2.5rem;
+   font-weight: bold;
+   text-align: center;
+   color: #9b59b6;
+   background: linear-gradient(90deg, #9b59b6, #6c5ce7);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 5px rgba(155, 89, 182, 0.4), 0 0 10px rgba(108, 92, 231, 0.3);
+   margin-bottom: 20px;
+   position: relative;
+   animation: wave 1.5s infinite ease-in-out;
+   transition: transform 0.3s ease, text-shadow 0.3s ease;
+">
+   Let's Connect!
+</h1>
+
+<style>
+@keyframes wave {
+    0% {
+        transform: scale(1);
+        text-shadow: 2px 2px 5px rgba(155, 89, 182, 0.4), 0 0 10px rgba(108, 92, 231, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 3px 3px 10px rgba(155, 89, 182, 0.6), 0 0 20px rgba(108, 92, 231, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 2px 2px 5px rgba(155, 89, 182, 0.4), 0 0 10px rgba(108, 92, 231, 0.3);
+    }
+}
+</style>
+
+
+
+
+          <div class="email-div">
+             <h1 class="email">
+                jaivishwa.dev@gmail.com
+             </h1>
+
+
+    <!--         <a class="button-3 w-button" href="mailto:jaivishwa.dev@gmail.com?subject=Hey!">-->
+    <!--            Send email-->
+    <!--         </a>-->
+           <a class="button-3 w-button" href="mailto:jaivishwa.dev@gmail.com?subject=Hey!" id="email-button">
+        Send email
+    </a>
+
+    <style>
+       /* Normal state */
+       .button-3.w-button {
+          background-color: #000000; /* Black background */
+          color: white;
+          padding: 12px 25px;
+          font-size: 16px;
+          border-radius: 8px;
+          text-align: center;
+          display: inline-block;
+          text-decoration: none;
+          transition: all 0.3s ease;
+       }
+
+       /* Hover state */
+       .button-3.w-button:hover {
+          background-color: #9b59b6; /* Purple background */
+          box-shadow: 0 0 10px rgba(155, 89, 182, 0.6); /* Glowing purple effect */
+          color: #fff; /* Keep the text white */
+       }
+
+       /* Active (click) state */
+       .button-3.w-button:active {
+          background-color: #8e44ad; /* Darker purple */
+          box-shadow: 0 0 20px rgba(155, 89, 182, 0.8); /* Stronger glow on click */
+       }
+    </style>
+
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="social-media">
+             <a class="w-inline-block" href="https://www.linkedin.com/in/jaivishwa-j/" target="_blank">
+                <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4c1f90e274c0053c6_linkedin.svg"/>
+             </a>
+             <a class="w-inline-block" href="https://github.com/Jaivishwa-dev" target="_blank">
+                <img alt="" class="social-icons" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5eac75e4a0d3e432e65a2661_github.svg" width="512"/>
+             </a>
+          </div>
+
+          <!-- Contact Form -->
+<!--          <form method="POST" id="contact-form" action="#contact" onsubmit="showThankYouMessage(event)">-->
+<!--             {% csrf_token %}-->
+<!--             <div class="form-group">-->
+<!--                <label for="name">Name</label>-->
+<!--                <input type="text" id="name" name="name" class="form-control" placeholder="The name's yours, right?🙋‍♂️" required>-->
+<!--             </div>-->
+<!--             <div class="form-group">-->
+<!--                <label for="phone">Phone</label>-->
+<!--                <input type="text" id="phone" name="phone" class="form-control" placeholder="How Can I Reach You?☎️" required>-->
+<!--             </div>-->
+<!--             <div class="form-group">-->
+<!--                <label for="email">Email</label>-->
+<!--                <input type="email" id="email" name="email" class="form-control" placeholder="Your Inbox...📫" required>-->
+<!--             </div>-->
+<!--             <div class="form-group">-->
+<!--                <label for="message">Message</label>-->
+<!--                <textarea id="message" name="message" class="form-control" rows="4" placeholder="Got Something to Say?🪪" required></textarea>-->
+<!--             </div>-->
+<!--             <button type="submit" class="btn-submit">Submit</button>-->
+<!--          </form>-->
+
+<!--          &lt;!&ndash; Thank You Message &ndash;&gt;-->
+<!--          <div id="thank-you-message" class="thank-you-message">-->
+<!--             <h2>Thank You for Your Message!</h2>-->
+<!--             <p>I will get back to you soon.</p>-->
+<!--          </div>-->
+<!--       </div>-->
+<!--    </div>-->
+
+<!--<style>-->
+<!--   .contact {-->
+<!--      padding: 60px 20px;-->
+<!--   }-->
+<!--   .custom-container {-->
+<!--      max-width: 1200px; /* Adjust this value to make the container larger */-->
+<!--      margin: 0 auto;-->
+<!--   }-->
+<!--   .form-group {-->
+<!--      margin-bottom: 20px;-->
+<!--   }-->
+<!--   .form-control {-->
+<!--      width: 100%;-->
+<!--      max-width: 900px; /* Increased form width */-->
+<!--      padding: 12px 20px;-->
+<!--      font-size: 16px;-->
+<!--      border: 2px solid #ccc;-->
+<!--      border-radius: 8px;-->
+<!--      transition: all 0.3s ease;-->
+<!--      margin: 0 auto;-->
+<!--   }-->
+<!--   .form-control:focus {-->
+<!--      outline: none;-->
+<!--      border-color: #9b59b6;-->
+<!--      box-shadow: 0 0 10px rgba(155, 89, 182, 0.6);-->
+<!--   }-->
+<!--   .btn-submit {-->
+<!--      background-color: #000000; /* Black color */-->
+<!--      color: #fff;-->
+<!--      padding: 12px 25px;-->
+<!--      border: none;-->
+<!--      border-radius: 8px;-->
+<!--      font-size: 16px;-->
+<!--      cursor: pointer;-->
+<!--      transition: background-color 0.3s ease;-->
+<!--      margin: 0 auto;-->
+<!--      display: block;-->
+<!--   }-->
+<!--   .btn-submit:hover {-->
+<!--      background-color: #8e44ad;-->
+<!--   }-->
+<!--   .thank-you-message {-->
+<!--      display: none;-->
+<!--      text-align: center;-->
+<!--      background-color: #dff0d8;-->
+<!--      padding: 20px;-->
+<!--      border-radius: 8px;-->
+<!--      margin-top: 20px;-->
+<!--   }-->
+<!--   .thank-you-message h2 {-->
+<!--      font-size: 24px;-->
+<!--      color: #2c3e50;-->
+<!--   }-->
+<!--   .thank-you-message p {-->
+<!--      font-size: 16px;-->
+<!--      color: #34495e;-->
+<!--   }-->
+<!--</style>-->
+
+<!--           <form method="POST" id="contact-form" action="{% url 'home' %}" onsubmit="submitForm(event)">-->
+<!--   {% csrf_token %}-->
+<!--   <div class="form-container">-->
+<!--      <div class="form-group">-->
+<!--         <label for="name">Your Name</label>-->
+<!--         <input type="text" id="name" name="name" class="form-control" placeholder="The name's yours, right?🙋‍♂️" required>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--         <label for="phone">Phone</label>-->
+<!--         <input type="text" id="phone" name="phone" class="form-control" placeholder="How Can I Reach You?☎️" required>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--         <label for="email">Email</label>-->
+<!--         <input type="email" id="email" name="email" class="form-control" placeholder="Your Inbox...📫" required>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--         <label for="message">Your Message</label>-->
+<!--         <textarea id="message" name="message" class="form-control" rows="4" placeholder="Got Something to Say?🪪" required></textarea>-->
+<!--      </div>-->
+<!--      <button type="submit" class="btn-submit">Submit</button>-->
+<!--   </div>-->
+
+<div class="form-container">
+   <div class="form-group">
+      <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+      <label for="name" class="floating-label">Your Name 🙋‍♂️</label>
    </div>
-  </div>
+   <div class="form-group">
+      <input type="text" id="phone" name="phone" class="form-control" placeholder=" " required>
+      <label for="phone" class="floating-label">Phone ☎️</label>
+   </div>
+   <div class="form-group">
+      <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+      <label for="email" class="floating-label">Email 📫</label>
+   </div>
+   <div class="form-group">
+      <textarea id="message" name="message" class="form-control" rows="4" placeholder=" " required></textarea>
+      <label for="message" class="floating-label">Your Message 🪪</label>
+   </div>
+   <button type="submit" class="btn-submit">Submit</button>
+</div>
+
+<style>
+   /* Form Container */
+   .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 50px;
+      background: linear-gradient(135deg, #c0c0c0, #f0f0f0);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      transition: transform 0.2s ease-in-out;
+   }
+
+   .form-container:hover {
+      transform: scale(1.02); /* Subtle hover effect */
+   }
+
+   .form-group {
+      position: relative;
+      margin-bottom: 30px;
+   }
+
+   .form-control {
+      width: 100%;
+      padding: 18px 20px;
+      font-size: 18px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      color: #333;
+      outline: none;
+      transition: all 0.3s ease;
+   }
+
+   .form-control:focus {
+      background-color: rgba(255, 255, 255, 1);
+      border-color: transparent; /* Change border color to transparent */
+      box-shadow: 0 0 10px rgba(76, 145, 216, 0.5);
+   }
+
+   /* Floating label */
+   .floating-label {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      font-size: 16px;
+      color: rgba(51, 51, 51, 0.7);
+      pointer-events: none;
+      transition: all 0.3s ease;
+   }
+
+   .form-control:focus ~ .floating-label,
+   .form-control:not(:placeholder-shown) ~ .floating-label {
+      top: -10px;
+      left: 15px;
+      font-size: 14px;
+      color: #4b0082;
+   }
+
+   /* Placeholder color change */
+   .form-control::placeholder {
+      color: #888; /* Light gray color for placeholder */
+      opacity: 1; /* Ensures the placeholder color is applied correctly */
+   }
+
+   .form-control:focus::placeholder {
+      color: #4c91d8; /* Change placeholder color to blue when focused */
+   }
+
+   .btn-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #4c91d8, #38b7ff);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+   }
+
+   .btn-submit:hover {
+      background: linear-gradient(135deg, #38b7ff, #4c91d8);
+      transform: translateY(-4px);
+   }
+</style>
+
+<script>
+   // JavaScript to detect if any input field is focused
+   const formContainer = document.querySelector('.form-container');
+   const formControls = document.querySelectorAll('.form-control');
+
+   formControls.forEach(input => {
+      input.addEventListener('focus', () => {
+         formContainer.classList.add('focused'); // Add class when any input is focused
+      });
+
+      input.addEventListener('blur', () => {
+         formContainer.classList.remove('focused'); // Remove class when input loses focus
+      });
+   });
+</script>
+
+
+
+</form>
+
+<!-- Thank You Pop-up Message -->
+<div id="thank-you-popup" class="thank-you-popup">
+   <div class="popup-content">
+      <h2>Thank You!</h2>
+      <p>Your message has been successfully sent. I will get back to you soon.</p>
+      <button onclick="closePopup()" class="close-btn">Close</button>
+   </div>
+</div>
+
+<script>
+   function submitForm(event) {
+      event.preventDefault(); // Prevent form from submitting and page reload
+      const form = document.getElementById('contact-form');
+      const formData = new FormData(form);
+
+      fetch(window.location.href, {
+         method: 'POST',
+         body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+         if (data.message) {
+            document.getElementById('thank-you-popup').style.display = 'flex'; // Show the pop-up message
+            form.reset(); // Optionally reset the form fields
+         }
+      })
+      .catch(error => {
+         console.error('Error:', error);
+      });
+   }
+
+   function closePopup() {
+      document.getElementById('thank-you-popup').style.display = 'none'; // Hide the pop-up when 'Close' is clicked
+   }
+</script>
+
+<style>
+   /* Form Container */
+   .form-container {
+      max-width: 1500px; /* Increased width */
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   }
+
+   .form-group {
+      margin-bottom: 25px; /* Increased space between form fields */
+   }
+
+   .form-control {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px; /* Larger font size */
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .form-control:focus {
+      border-color: #9b59b6;
+      box-shadow: 0 0 12px rgba(155, 89, 182, 0.5);
+      outline: none;
+   }
+
+   .btn-submit {
+      width: 100%;
+      background-color: #9b59b6;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px; /* Larger text */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+   }
+
+   .btn-submit:hover {
+      background-color: #8e44ad;
+   }
+
+   /* Thank You Pop-up */
+   .thank-you-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+   }
+
+   .popup-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+   }
+
+   .popup-content h2 {
+      font-size: 26px;
+      color: #2c3e50;
+   }
+
+   .popup-content p {
+      font-size: 18px;
+      color: #34495e;
+   }
+
+   .close-btn {
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+   }
+
+   .close-btn:hover {
+      background-color: #8e44ad;
+   }
+</style>
+
+
+
+
+
+
+
+
+
+
   <div class="footer">
    <div class="custom-container">
     <div class="text-block-4">
 <!--     Made with ð by Jai vishwa-->
-     Made with 💜 by Jai vishwa
+     Made with 💜 by Vichu...😉
     </div>
    </div>
   </div>
   <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e9c6f33b27cf6b2909e13c1" type="text/javascript">
   </script>
-  <script src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/js/webflow.5175e8e9b.js" type="text/javascript">
+<!--  <script src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/js/webflow.5175e8e9b.js" type="text/javascript">-->
   </script>
   <!--[if lte IE 9]><script src="{% static '//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js' %}"></script><![endif]-->
+
+
+
+<script>
+   // Function to show "Thank You" message after form submission
+   function showThankYouMessage(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      document.getElementById("contact-form").style.display = "none"; // Hide the form
+      document.getElementById("thank-you-message").style.display = "block"; // Show thank you message
+   }
+</script>
+
+<script>
+  // Add hover effect with JavaScript to handle the glow transition
+  document.querySelectorAll('.nav-big').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      // Apply glowing effect to the text
+      this.style.transition = 'color 0.3s, text-shadow 0.5s ease';
+      this.style.textShadow = '0 0 8px rgba(128, 0, 128, 1), 0 0 25px rgba(128, 0, 128, 1)';
+      this.style.color = '#800080';  // Apply purple color to the text as well
+    });
+
+    item.addEventListener('mouseleave', function() {
+      // Reset text glow effect
+      this.style.textShadow = 'none';
+      this.style.color = 'inherit';  // Reset the text color
+    });
+  });
+</script>
+
+       </div>
+    </div>
+
  </body>
 </html>

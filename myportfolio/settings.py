@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xmo9g0*$#3=3eh%=c#v-*__5!*#_ff(4$wpk*0p46ufbr#3!8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*","http://127.0.0.1:8000"," https://5d25-2402-3a80-1957-ce3b-94c0-c380-46cf-faa7.ngrok-free.app"]
 
 
 # Application definition
@@ -116,13 +117,38 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+# Static files (CSS, JavaScript, images) configurations
+STATIC_URL = '/static/'  # URL to access static files
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
+# In development, Django will look for static files in the static directories of your apps as well as the global static directory
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Global static directory for custom/static files
+]
+
+# For production, the static files will be collected here when running `python manage.py collectstatic`
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where to collect static files (used in production)
+
+# Media files (user-uploaded content) configurations
+MEDIA_URL = '/media/'  # URL to access media files
+MEDIA_ROOT = BASE_DIR / 'media'  # Location where media files will be stored on the filesystem
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# # Example email settings for development (console backend)
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# CONTACT_EMAIL = 'jaivishwa.dev@gmail.com'  # The email address to receive contact form submissions
+
+
+# Example email settings for production
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Or another SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'jaivishwa.dev@gmail.com'
+EMAIL_HOST_PASSWORD = 'ijxq eowz sjdi ssjp'  # Ensure this is securely managed
+CONTACT_EMAIL = 'jaivishwa.dev@gmail.com'  # Email address where you want to receive contact form messages
