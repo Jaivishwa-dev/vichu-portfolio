@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*",
                  "http://127.0.0.1:8000",
                  " https://d855-2402-3a80-19-4ff6-3593-afe2-b292-aece.ngrok-free.app ",
-
+                 
                  ]
 
 
