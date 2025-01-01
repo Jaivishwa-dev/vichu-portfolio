@@ -33,3 +33,5 @@ def home(request):
         'skills': skills,
         'testimonials': testimonials
     })
+
+

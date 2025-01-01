@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*",
                  "http://127.0.0.1:8000",
-                 " https://d855-2402-3a80-19-4ff6-3593-afe2-b292-aece.ngrok-free.app ",
+                 " https://6c4e-2402-3a80-1957-1f31-f802-b7d8-f718-2bca.ngrok-free.app   ",
 
                  ]
 
@@ -156,3 +156,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'jaivishwa.dev@gmail.com'
 EMAIL_HOST_PASSWORD = 'ijxq eowz sjdi ssjp'  # Ensure this is securely managed
 CONTACT_EMAIL = 'jaivishwa.dev@gmail.com'  # Email address where you want to receive contact form messages
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
