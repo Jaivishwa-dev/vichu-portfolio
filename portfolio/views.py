@@ -35,3 +35,16 @@ def home(request):
     })
 
 
+from django.shortcuts import render
+from django.http import FileResponse, Http404
+
+def showcaseing_my_resume(request):
+    try:
+        # Path to the resume file
+        resume_path = 'static/resume/jaivishwa.dev.pdf'  # Update with the correct path
+        return FileResponse(open(resume_path, 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404("Resume not found.")
+
+
+

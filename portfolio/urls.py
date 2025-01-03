@@ -6,6 +6,8 @@ from . import views
 
 urlpatterns = [
     path('',views.home, name='home'),
+    path('showcaseing_my_resume/', views.showcaseing_my_resume, name='view_resume'),
+
 
 ]
 if settings.DEBUG:

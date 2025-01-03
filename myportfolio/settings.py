@@ -28,9 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*",
                  "http://127.0.0.1:8000",
-                 " https://6c4e-2402-3a80-1957-1f31-f802-b7d8-f718-2bca.ngrok-free.app   ",
-
-                 ]
+                                ]
 
 
 # Application definition
@@ -140,6 +138,8 @@ MEDIA_ROOT = BASE_DIR / 'media'  # Location where media files will be stored on 
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 
 
