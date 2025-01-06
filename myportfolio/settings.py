@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1xmo9g0*$#3=3eh%=c#v-*__5!*#_ff(4$wpk*0p46ufbr#3!8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','https://3128-2402-3a80-1941-7c4c-9d68-3c63-1f2d-9fe9.ngrok-free.app ']
 
 
 # Application definition
@@ -155,3 +155,5 @@ EMAIL_HOST_USER = 'jaivishwa.dev@gmail.com'
 EMAIL_HOST_PASSWORD = 'ijxq eowz sjdi ssjp'  # Ensure this is securely managed
 CONTACT_EMAIL = 'jaivishwa.dev@gmail.com'  # Email address where you want to receive contact form messages
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
