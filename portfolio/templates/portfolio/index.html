@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load static %}
 <html data-wf-domain="" data-wf-page="5e9c6f3492aec830bc2678d5" data-wf-site="5e9c6f33b27cf6b2909e13c1" data-wf-status="1">
@@ -7,7 +6,6 @@
   <title>
    Jai vishwa
   </title>
-<!--  <meta content="Hey there! I'm Jai vishwa and I make awesome websites! Check out my portfolio here at rishit.codes." name="description"/>-->
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <meta content="Webflow" name="generator"/>
   <link href="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/css/rishit.webflow.9de09050d.css" rel="stylesheet" type="text/css"/>
@@ -27,8 +25,170 @@
   <script type="text/javascript">
    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-73079055-13', {'anonymize_ip': true});
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/GLTFLoader/2.0.0/GLTFLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  
+  <style>
+    /* Animation Utilities */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Space Theme Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Floating Spaceship */
+    .spaceship {
+      position: absolute;
+      width: 150px;
+      animation: floatSpaceship 6s ease-in-out infinite;
+    }
+
+    @keyframes floatSpaceship {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Floating Satellite */
+    .satellite {
+      position: absolute;
+      width: 100px;
+      animation: floatSatellite 8s ease-in-out infinite;
+    }
+
+    @keyframes floatSatellite {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Floating Moon */
+    .moon {
+      position: absolute;
+      width: 200px;
+      animation: rotateMoon 20s linear infinite;
+    }
+
+    @keyframes rotateMoon {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Orbiting Planets */
+    .planet {
+      position: absolute;
+      width: 100px;
+      animation: orbitPlanet 10s linear infinite;
+    }
+
+    @keyframes orbitPlanet {
+      0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+    }
+
+    /* Glow Effect */
+    .glow-on-hover {
+      transition: all 0.3s ease;
+    }
+
+    .glow-on-hover:hover {
+      box-shadow: 0 0 25px rgba(100, 255, 218, 0.5);
+      transform: translateY(-5px);
+    }
+
+    /* 3D Anime Cartoon */
+    #anime-cartoon {
+      width: 100%;
+      height: 500px;
+      position: relative;
+    }
+
+    /* Card Hover Animation */
+    .card-hover {
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .card-hover:hover {
+      transform: rotateY(15deg) rotateX(15deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .cards-grid-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cards {
+      background: linear-gradient(135deg,rgb(249, 248, 248), #feb47b);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      width: 300px;
+      position: relative;
+    }
+    .project-card {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+  </style>
  </head>
  <body class="body">
+  
+  <div class="animated-bg"></div>
+  <div class="spaceship" style="top: 20%; left: 10%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/231/231128.png" alt="UFO Spaceship" 
+       style="width: 100px; height: auto; 
+              filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.5)) invert(1);
+              animation: wobble 3s ease-in-out infinite;">
+  </div>
+
+  <style>
+@keyframes wobble {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(5deg); 
+  }
+}
+</style>
+
+  <div class="satellite" style="top: 60%; right: 15%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2276/2276931.png" alt="Satellite" style="width: 80px; height: auto; filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.5));">
+  </div>
+  <div class="moon" style="top: 10%; right: 30%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1146/1146984.png" alt="Moon" style="width: 120px; height: auto; filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.5));">
+  </div>
+  <div class="planet" style="top: 50%; left: 50%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3212/3212567.png" alt="Planet" style="width: 100px; height: auto; filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.5));">
+  </div>
   <div class="navbar-3 w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in" data-easing2="ease-out" role="banner">
    <div class="custom-container nav1">
     <a aria-current="page" class="brand-2 w-nav-brand w--current" href="/" style="display: inline-block;">
@@ -77,6 +237,121 @@
 
   // Optionally, if you want to set the theme in localStorage, you can uncomment the next line
   // localStorage.setItem('theme', 'dark');
+
+  // 3D Anime Cartoon
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('anime-cartoon').appendChild(renderer.domElement);
+
+  const loader = new THREE.GLTFLoader();
+  loader.load('{% static "path/to/your/anime-cartoon-model.glb" %}', function (gltf) {
+    scene.add(gltf.scene);
+    gltf.scene.position.set(0, -1, 0);
+  });
+
+  const light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(5, 5, 5).normalize();
+  scene.add(light);
+
+  camera.position.z = 5;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Anime.js animations
+  anime({
+    targets: '.hero-big-txt',
+    translateY: [-30, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeOutElastic(1, .8)',
+    delay: 300
+  });
+
+  anime({
+    targets: '.cards',
+    scale: [0.9, 1],
+    opacity: [0, 1],
+    duration: 800,
+    delay: anime.stagger(200),
+    easing: 'easeOutElastic(1, .8)'
+  });
+
+  // Card hover animation
+  document.querySelectorAll('.cards').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      anime({
+        targets: card,
+        rotateY: 15,
+        rotateX: 15,
+        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
+        duration: 600,
+        easing: 'easeOutElastic(1, .8)'
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      anime({
+        targets: card,
+        rotateY: 0,
+        rotateX: 0,
+        boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+        duration: 600,
+        easing: 'easeOutElastic(1, .8)'
+      });
+    });
+  });
+
+  // Additional anime.js animations
+  anime({
+    targets: '.hero-small-txt',
+    translateX: [-50, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeOutElastic(1, .8)',
+    delay: 500
+  });
+
+  anime({
+    targets: '.hero-right img',
+    scale: [0.8, 1],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeOutElastic(1, .8)',
+    delay: 700
+  });
+
+  anime({
+    targets: '.nav-big',
+    translateY: [-20, 0],
+    opacity: [0, 1],
+    duration: 800,
+    easing: 'easeOutElastic(1, .8)',
+    delay: anime.stagger(200, {start: 1000})
+  });
+
+  // Anime.js cartoon animations
+  anime({
+    targets: '#anime-cartoon',
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 1500,
+    easing: 'easeOutElastic(1, .8)',
+    delay: 1000
+  });
+
+  anime({
+    targets: '#anime-cartoon',
+    rotate: '1turn',
+    duration: 2000,
+    easing: 'easeInOutSine',
+    loop: true
+  });
 </script>
 
 
@@ -99,7 +374,7 @@
       <div class="hero-small-txt">
        Hi, I'm
       </div>
-      <div class="hero-big-txt" style="background: linear-gradient(90deg, #34ace0, #ffb142, #ff5252, #706fd3, #33d9b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 300%; animation: wobble-gradient 5s infinite ease-in-out;">
+      <div class="hero-big-txt fade-in float-animation" style="background: linear-gradient(90deg, #34ace0, #ffb142, #ff5252, #706fd3, #33d9b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 300%; animation: wobble-gradient 5s infinite ease-in-out;">
   Jai Vishwa
   <span class="text-span-4" style="color: #34ace0;">,</span>
 </div>
@@ -128,9 +403,6 @@
        And I craft striking, impactful websites!
       </div>
      </div>
-<!--     <div class="hero-right">-->
-<!--      <img alt="" class="hero-img" src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5ea88dfff888240eaecade30_Rishit%20SVG.svg"/>-->
-<!--     </div>-->
         <div class="hero-right" style="position: relative; display: inline-block;">
   <!-- Purple Glow -->
   <div
@@ -158,40 +430,21 @@
     </div>
    </div>
   </div>
+
+
+
+
+
+
+  
+
+
       <div class="skills" id="skills">
 
 
 
-          <div class="custom-container" style="padding: 50px; background: linear-gradient(120deg, #f6d365, #fda085); border-radius: 100px;">
+          <div class="custom-container" style="padding: 50px; background: linear-gradient(135deg, #ff7e5f, #feb47b); border-radius: 100px;">
       <style>
-        .cards-grid-container {
-          display: flex;
-          gap: 20px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        .cards {
-          background: #fff;
-          border-radius: 10px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          padding: 20px;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-          width: 300px;
-          position: relative;
-        }
-        /* Default center card pop-up and glow */
-        .cards:nth-child(2) {
-          transform: scale(1.1);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-          filter: brightness(1.1);
-        }
-        /* Hover effect for any card */
-        .cards:hover {
-          transform: scale(1.2);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-          z-index: 1; /* Ensures hovered card stays above others */
-          filter: brightness(1.2); /* Makes the card glow slightly more */
         }
         /* Push other cards down when one is hovered */
         .cards:not(:hover):not(:nth-child(2)) {
@@ -215,7 +468,7 @@
           <div class="skills-anim" data-animation-type="lottie" data-autoplay="1" data-loop="1" data-src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5ea88fa5b54190406366c9ed_skills_ui_ux_design.json"></div>
           <img alt="" class="social-icons" src="{% static 'images/card_2.png' %}"/>
         </div>
-        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg, #ff7eb3, #ff758c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">UI/UX Design</h3>
+        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg,rgb(240, 238, 238),rgb(245, 239, 240)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">UI/UX Design</h3>
         <p class="skills-para" style="font-size: 1rem; color: #555;">Designing and prototyping beautiful web pages in Figma and making those prototypes real is my forte!</p>
       </div>
       <!-- Card 1 -->
@@ -224,7 +477,7 @@
           <div class="skills-anim" data-animation-type="lottie" data-autoplay="1" data-loop="1" data-src="https://uploads-ssl.webflow.com/5e9c6f33b27cf6b2909e13c1/5ea88f2bcb6c06df50bc35a8_skills_web_design.json"></div>
           <img alt="" class="social-icons" src="{% static 'images/card_1.jpg' %}"/>
         </div>
-        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg, #ff7eb3, #ff758c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Web Development</h3>
+        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg,rgb(245, 243, 244),rgb(250, 248, 248)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Web Development</h3>
         <p class="skills-para" style="font-size: 1rem; color: #555;">Building awesome websites is my passion. Python, Django, HTML, CSS, JavaScript, Bootstrap, MySQL? You name it. I got it covered!</p>
       </div>
       <!-- Card 3 -->
@@ -240,7 +493,7 @@
           </style>
           <img alt="" class="social-icons" src="{% static 'images/card_3.png' %}" />
         </div>
-        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg, #ff7eb3, #ff758c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Webmaster</h3>
+        <h3 class="skills-heading" style="font-size: 1.5rem; margin-bottom: 10px; background: linear-gradient(90deg,rgb(254, 252, 253),rgb(253, 250, 251)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Webmaster</h3>
         <p class="skills-para" style="font-size: 1rem; color: #555;">Through careful SEO strategy and targeted marketing, I ensure your website stands out and reaches the right audience.</p>
       </div>
     </div>
@@ -401,6 +654,12 @@
         transform: scale(1.05); /* Slight zoom effect */
       }
     </style>
+
+
+
+
+
+
 
 
 
@@ -669,8 +928,23 @@
     }
 </style>
 
-
-
+<!-- Asteroids and Meteors -->
+<div class="asteroid" style="top: 20%; left: 5%;">
+  <img src="https://cdn-icons-png.flaticon.com/512/3212/3212567.png" alt="Asteroid" style="width: 50px; height: auto; animation: fallAsteroid 4s linear infinite;">
+</div>
+<div class="meteor" style="top: 40%; right: 10%;">
+  <img src="https://cdn-icons-png.flaticon.com/512/3212/3212567.png" alt="Meteor" style="width: 70px; height: auto; animation: fallMeteor 6s linear infinite;">
+</div>
+<style>
+  @keyframes fallAsteroid {
+    0% { transform: translateY(-100px) rotate(0deg); }
+    100% { transform: translateY(500px) rotate(360deg); }
+  }
+  @keyframes fallMeteor {
+    0% { transform: translateY(-100px) rotate(0deg); }
+    100% { transform: translateY(700px) rotate(360deg); }
+  }
+</style>
 
 </div>
     </div>
@@ -680,7 +954,7 @@
         <div
       style="border-radius: 22px; transition: all 0.3s; background-color: transparent;"
       onmouseover="this.style.boxShadow='0px 0px 20px 5px rgba(100, 255, 218, 0.6); background-image: linear-gradient(163deg, #64ffda 0%, #64ffda 100%)'"
-      onmouseout="this.style.boxShadow='none'; background-image: none;">
+      onmouseout="this.style.boxShadow='none'; background-image: none;'">
       <div
         style="display: flex; justify-content: center; align-items: center; height: 100vh; border-radius: 0; transition: all 0.2s;">
         <form
@@ -769,6 +1043,172 @@
           alert('Something went wrong. Please try again.');
         }
       });
+
+      // Fade in elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in').forEach(element => {
+        observer.observe(element);
+      });
+
+      // 3D Card Tilt Effect
+      document.querySelectorAll('.cards, .project-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          const rotateX = (y - centerY) / 10;
+          const rotateY = (centerX - x) / 10;
+          
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+      });
+
+      // Anime.js animations
+      anime({
+        targets: '.hero-big-txt',
+        translateY: [-30, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutElastic(1, .8)',
+        delay: 300
+      });
+
+      anime({
+        targets: '.cards',
+        scale: [0.9, 1],
+        opacity: [0, 1],
+        duration: 800,
+        delay: anime.stagger(200),
+        easing: 'easeOutElastic(1, .8)'
+      });
+
+      // Additional anime.js animations
+      anime({
+        targets: '.hero-small-txt',
+        translateX: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutElastic(1, .8)',
+        delay: 500
+      });
+
+      anime({
+        targets: '.hero-right img',
+        scale: [0.8, 1],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutElastic(1, .8)',
+        delay: 700
+      });
+
+      anime({
+        targets: '.nav-big',
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 800,
+        easing: 'easeOutElastic(1, .8)',
+        delay: anime.stagger(200, {start: 1000})
+      });
+
+      // Particle effect in background
+      const canvas = document.createElement('canvas');
+      document.body.appendChild(canvas);
+      canvas.style.position = 'fixed';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      canvas.style.zIndex = '-1';
+      canvas.style.pointerEvents = 'none';
+
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2;
+          this.speedX = Math.random() * 1 - 0.5;
+          this.speedY = Math.random() * 1 - 0.5;
+        }
+
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+
+          if (this.x > canvas.width) this.x = 0;
+          if (this.x < 0) this.x = canvas.width;
+          if (this.y > canvas.height) this.y = 0;
+          if (this.y < 0) this.y = canvas.height;
+        }
+
+        draw() {
+          ctx.fillStyle = 'rgba(100, 255, 218, 0.5)';
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function initParticles() {
+        particles = [];
+        for (let i = 0; i < 100; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        
+        requestAnimationFrame(animateParticles);
+      }
+
+      initParticles();
+      animateParticles();
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
     </script>
 
 
@@ -776,3 +1216,4 @@
 
  </body>
 </html>
+
